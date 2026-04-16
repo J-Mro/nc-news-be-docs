@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width"
+      ="device-width,"
+      initial-scale="1.0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>NC News API</title>
+  </head>
+  <body>
+    <header>
+      <h1>NC News API</h1>
+      <p id="header-p">
+        Welcome to the best API on the market. <br /><br />
+        This beautifully designed, very professional API is designed to allow
+        users to interact with the article, user, comment and topic data
+        available on the nc-news database. Give it a go!
+      </p>
+    </header>
+    <main>
+      <h2>This is the API you're looking for...</h2>
+      <a href="https://github.com/J-Mro/nc-back-end">
+        <button class="api-link-button">Click Me!</button>
+      </a>
+
+      <h2>Available Endpoints</h2>
+      <ul>
+        <li class="endpoint-card">
+          <h3>GET /api/topics</h3>
+          <p>Retrieve a list of all topics.</p>
+
+          <h4>Example response:</h4>
+          <pre>
+  <code>
+{
+  topics: [
+    {
+      slug: 'coding',
+      description: 'Code is love, code is life'
+    },
+    {
+      slug: 'football',
+      description: 'FOOTIE!'
+    },
+    {
+      slug: 'cooking',
+      description: 'Hey good looking, what you got cooking?''
+    }
+  ]
+}
+  </code>
+</pre>
+        </li>
+        <li class="endpoint-card">
+          <h3>GET /api/articles</h3>
+          <p>Retrieve a list of all articles.</p>
+
+          <h4>Example response:</h4>
+          <pre>
+  <code>
+{
+  articles: [
+      {
+        author: 'icellusedkars',
+        title: 'Eight pug gifs that remind me of mitch',
+        article_id: 3,
+        topic: 'mitch',
+        created_at: '2020-11-03T09:12:00.000Z',
+        votes: 0,
+        article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700',
+        comment_count: '2'
+      },
+      {
+        author: 'icellusedkars',
+        title: 'A',
+        article_id: 6,
+        topic: 'mitch',
+        created_at: '2020-10-18T01:00:00.000Z',
+        votes: 0,
+        article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700',
+        comment_count: '1'
+      },
+      {
+        author: 'icellusedkars',
+        title: 'Sony Vaio; or, The Laptop',
+        article_id: 2,
+        topic: 'mitch',
+        created_at: '2020-10-16T05:03:00.000Z',
+        votes: 0,
+        article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700',
+        comment_count: '0'
+      },
+      {
+        author: 'butter_bridge',
+        title: 'Moustache',
+        article_id: 12,
+        topic: 'mitch',
+        created_at: '2020-10-11T11:24:00.000Z',
+        votes: 0,
+        article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700',
+        comment_count: '0'
+      },
+      {
+        author: 'butter_bridge',
+        title: 'Another article about Mitch',
+        article_id: 13,
+        topic: 'mitch',
+        created_at: '2020-10-11T11:24:00.000Z',
+        votes: 0,
+        article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700',
+        comment_count: '0'
+      },
+      {
+        author: 'rogersop',
+        title: 'UNCOVERED: catspiracy to bring down democracy',
+        article_id: 5,
+        topic: 'cats',
+        created_at: '2020-08-03T13:14:00.000Z',
+        votes: 0,
+        article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700',
+        comment_count: '2'
+      },
+      {
+        author: 'butter_bridge',
+        title: 'Living in the shadow of a great man',
+        article_id: 1,
+        topic: 'mitch',
+        created_at: '2020-07-09T20:11:00.000Z',
+        votes: 100,
+        article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700',
+        comment_count: '11'
+      },
+      {
+        author: 'butter_bridge',
+        title: They're not exactly dogs, are they?,
+        article_id: 9,
+        topic: 'mitch',
+        created_at: '2020-06-06T09:10:00.000Z',
+        votes: 0,
+        article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700',
+        comment_count: '2'
+      },
+      {
+        author: 'rogersop',
+        title: 'Seven inspirational thought leaders from Manchester UK',
+        article_id: 10,
+        topic: 'mitch',
+        created_at: '2020-05-14T04:15:00.000Z',
+        votes: 0,
+        article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700',
+        comment_count: '0'
+      },
+      {
+        author: 'rogersop',
+        title: 'Student SUES Mitch!',
+        article_id: 4,
+        topic: 'mitch',
+        created_at: '2020-05-06T01:14:00.000Z',
+        votes: 0,
+        article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700',
+        comment_count: '0'
+      },
+      {
+        author: 'icellusedkars',
+        title: 'Does Mitch predate civilisation?',
+        article_id: 8,
+        topic: 'mitch',
+        created_at: '2020-04-17T01:08:00.000Z',
+        votes: 0,
+        article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700',
+        comment_count: '0'
+      },
+      {
+        author: 'icellusedkars',
+        title: 'Am I a cat?',
+        article_id: 11,
+        topic: 'mitch',
+        created_at: '2020-01-15T22:21:00.000Z',
+        votes: 0,
+        article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700',
+        comment_count: '0'
+      },
+      {
+        author: 'icellusedkars',
+        title: 'Z',
+        article_id: 7,
+        topic: 'mitch',
+        created_at: '2020-01-07T14:08:00.000Z',
+        votes: 0,
+        article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700',
+        comment_count: '0'
+      }
+    ]
+}
+  </code>
+</pre>
+        </li>
+        <li class="endpoint-card">
+          <h3>GET/PATCH /api/articles/:article_id</h3>
+          <p>
+            Retrieve an article by its unique id. Note for PATCH requests, the
+            request body must be of the form { inc_votes :
+            number-of-votes-to-increase-by}
+          </p>
+
+          <h4>Example response (GET /api/articles/2):</h4>
+          <pre>
+  <code>
+{
+      article_id: 2,
+      title: 'Sony Vaio; or, The Laptop',
+      topic: 'mitch',
+      author: 'icellusedkars',
+      body: 'Call me Mitchell. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would buy a laptop about a little and see the codey part of the world. It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people’s hats off—then, I account it high time to get to coding as soon as I can. This is my substitute for pistol and ball. With a philosophical flourish Cato throws himself upon his sword; I quietly take to the laptop. There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the same feelings towards the the Vaio with me.',
+      created_at: '2020-10-16T05:03:00.000Z',
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700'
+}
+
+  </code>
+</pre>
+          <h4>
+            Example response (PATCH /api/articles/2) where the article votes
+            value is initially 0:
+          </h4>
+          <pre>
+  <code>
+{
+      article_id: 2,
+      title: 'Sony Vaio; or, The Laptop',
+      topic: 'mitch',
+      author: 'icellusedkars',
+      body: 'Call me Mitchell. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would buy a laptop about a little and see the codey part of the world. It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people’s hats off—then, I account it high time to get to coding as soon as I can. This is my substitute for pistol and ball. With a philosophical flourish Cato throws himself upon his sword; I quietly take to the laptop. There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the same feelings towards the the Vaio with me.',
+      created_at: '2020-10-16T05:03:00.000Z',
+      votes: 1,
+      article_img_url: 'https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?w=700&h=700'
+}
+
+  </code>
+</pre>
+        </li>
+        <li class="endpoint-card">
+          <h3>GET/POST /api/articles/:article_id/comments</h3>
+          <p>
+            Retrieve a list of all comments on a given article, sorted by the
+            most recent comment. Note for the POST method, the request body must
+            be an object of the form {username : "your-username", body:
+            "your-comment"}.
+          </p>
+
+          <h4>Example response (GET /api/articles/2/comments):</h4>
+          <pre>
+  <code>
+{
+      comments: [
+        {
+          comment_id: 11,
+          votes: 0,
+          created_at: '2020-09-19T23:10:00.000Z',
+          author: 'icellusedkars',
+          body: 'Ambidextrous marsupial',
+          article_id: 3
+        },
+        {
+          comment_id: 10,
+          votes: 0,
+          created_at: '2020-06-20T07:24:00.000Z',
+          author: 'icellusedkars',
+          body: 'git push origin master',
+          article_id: 3
+        }
+      ]
+}
+  </code>
+</pre>
+          <h4>Example response (GET /api/articles/2/comments):</h4>
+          <pre>
+  <code>
+{
+      comments: [
+        {
+          comment_id: 11,
+          votes: 0,
+          created_at: '2020-09-19T23:10:00.000Z',
+          author: 'icellusedkars',
+          body: 'Ambidextrous marsupial',
+          article_id: 3
+        },
+        {
+          comment_id: 10,
+          votes: 0,
+          created_at: '2020-06-20T07:24:00.000Z',
+          author: 'icellusedkars',
+          body: 'git push origin master',
+          article_id: 3
+        }
+      ]
+}
+  </code>
+</pre>
+          <h4>
+            Example response (POST /api/articles/12/comments) to post a new
+            comment. Note the response body returns the comment posted.:
+          </h4>
+          <pre>
+  <code>
+    {
+      comment_id: 19,
+      article_id: 12,
+      body: 'test',
+      votes: 0,
+      author: 'butter_bridge',
+      created_at: '2026-02-10T13:59:53.209Z'
+    }
+  </code>
+</pre>
+        </li>
+        <li class="endpoint-card">
+          <h3>GET /api/users</h3>
+          <p>Retrieve a list of all users.</p>
+
+          <h4>Example response:</h4>
+          <pre>
+            <code>
+{
+    users: [
+        {
+            username: 'butter_bridge',
+            name: 'jonny',
+            avatar_url: 'https://www.healthytherapies.com/wp-content/uploads/2016/06/Lime3.jpg'
+        },
+        {
+            username: 'icellusedkars',
+            name: 'sam',
+            avatar_url: 'https://avatars2.githubusercontent.com/u/24604688?s=460&v=4'
+        },
+        {
+            username: 'rogersop',
+            name: 'paul',
+            avatar_url: 'https://avatars2.githubusercontent.com/u/24394918?s=400&v=4'
+        },
+        {
+            username: 'lurker',
+            name: 'do_nothing',
+            avatar_url: 'https://www.golenbock.com/wp-content/uploads/2015/01/placeholder-user.png'
+        }
+    ]
+}
+            </code>
+            </pre>
+        </li>
+        <li class="endpoint-card">
+          <h3>DELETE /api/comments/:comment_id</h3>
+          <p>Delete a comment based off of its unique id.</p>
+        </li>
+        <p>
+          <br />
+          Thank you! But our princess is in another website! <br />
+        </p>
+        <img
+          src="./images/toad-removebg-preview.png"
+          alt="image of toad from mario"
+        />
+      </ul>
+    </main>
+    <footer>
+      <a href="https://github.com/J-Mro"
+        ><button>
+          <img
+            src="./images/github-cat.png"
+            alt="GitHub Cat Button"
+            class="github-button"
+          /></button
+      ></a>
+      <a href="https://www.linkedin.com/in/jmroueh/"
+        ><button>
+          <img
+            src="./images/linkedin-app-white-icon.png"
+            alt="LinkedIn Button"
+            class="linkedin-button"
+          /></button
+      ></a>
+    </footer>
+  </body>
+</html>
